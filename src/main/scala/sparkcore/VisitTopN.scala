@@ -15,6 +15,7 @@ object VisitTopN {
     val sc: SparkContext = getSc("VisitTopN", "local[2]", "WARN")
 
     val dataRDD: RDD[String] = sc.textFile("src/main/resources/sparkcore/access.log")
+
     val top5: Array[(String, Int)] = dataRDD.filter(_.split(" ").length > 10)
       .map(_.split(" ")(10))
       .filter(_.startsWith("\"http"))
