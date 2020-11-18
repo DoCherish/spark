@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1fa3a5c-c7b9-4d30-ab28-83e24e412452" name="Default Changelist" comment="" />
+    <list default="true" id="c1fa3a5c-c7b9-4d30-ab28-83e24e412452" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/sparkcore/UvCount.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/sparkcore/UvCount.scala" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +21,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -37,6 +45,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../travel" />
@@ -157,6 +166,7 @@
       <workItem from="1596378973330" duration="1785000" />
       <workItem from="1604977527179" duration="7402000" />
       <workItem from="1605666629095" duration="10257000" />
+      <workItem from="1605683927161" duration="350000" />
     </task>
     <servers />
   </component>
@@ -188,6 +198,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="312" height="696" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605683294872" />
+    <state x="611" y="137" key="RollbackChangesDialog" timestamp="1605684114493">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="611" y="137" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1605684114493" />
     <state x="272" y="57" key="SettingsEditor" timestamp="1605672423654">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
