@@ -14,6 +14,8 @@ object Constants {
   lazy val mysqlUser: String = config.getString("mysql.user")
   lazy val mysqlPsw: String = config.getString("mysql.password")
 
+  
+
 
 
 }
