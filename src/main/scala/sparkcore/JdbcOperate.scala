@@ -18,9 +18,6 @@ import org.apache.commons.lang3.StringUtils
  */
 object JdbcOperate {
 
-  private val sql1: String = "SELECT * FROM jobdetail_copy WHERE job_id >= ? AND job_id <= ?"
-  private val sql2: String = "insert into job_count(search_name, job_num) values (?, ?)"
-
   def main(args: Array[String]): Unit = {
 
     val sc: SparkContext = getSc("JdbcOperate", "local[2]", "WARN")
