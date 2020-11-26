@@ -20,6 +20,9 @@ object Constants {
 
   lazy val pdtsPath: String = "src/main/resources/sparkcore/pdts.txt"
   lazy val ordersPath: String = "src/main/resources/sparkcore/orders.txt"
+  lazy val webDataPath = "src/main/resources/sparkcore/webdata"
+  lazy val outParPath = "src/main/resources/sparkcore/out_partition"
+
 
   
 
