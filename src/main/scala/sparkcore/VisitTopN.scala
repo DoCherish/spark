@@ -2,7 +2,7 @@ package sparkcore
 
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
-import utils.SparkCoreUtil.getSc
+import utils.SparkContextUtil.getSc
 
 /**
  * @Author Do

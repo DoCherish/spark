@@ -4,7 +4,7 @@ import java.sql.{Connection, DriverManager, PreparedStatement, ResultSet}
 
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.{JdbcRDD, RDD}
-import utils.SparkCoreUtil.getSc
+import utils.SparkContextUtil.getSc
 import constant.Constants._
 import org.apache.commons.lang3.StringUtils
 

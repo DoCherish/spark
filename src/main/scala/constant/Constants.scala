@@ -20,10 +20,15 @@ object Constants {
 
   lazy val pdtsPath: String = "src/main/resources/sparkcore/pdts.txt"
   lazy val ordersPath: String = "src/main/resources/sparkcore/orders.txt"
-  lazy val webDataPath = "src/main/resources/sparkcore/webdata"
-  lazy val outParPath = "src/main/resources/sparkcore/out_partition"
+  lazy val webDataPath: String = "src/main/resources/sparkcore/webdata"
+  lazy val outParPath: String = "src/main/resources/sparkcore/out_partition"
 
+  lazy val HBASE_ZOOKEEPER_QUORUM: String = "hbase.zookeeper.quorum"
+  lazy val HBASE_ZOOKEEPER_PROPERTY_CLIENTPORT: String = "hbase.zookeeper.property.clientPort"
+  lazy val zkQuorum: String = config.getString("hbase.zookeeper.quorum")
+  lazy val zkPort: String = config.getString("hbase.zookeeper.property.clientPort")
 
+  lazy val sparkHbase: String = "spark_hbase"
   
 
 

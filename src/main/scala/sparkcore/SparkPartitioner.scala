@@ -2,7 +2,7 @@ package sparkcore
 
 import org.apache.spark.{Partitioner, SparkContext}
 import org.apache.spark.rdd.RDD
-import utils.SparkCoreUtil.getSc
+import utils.SparkContextUtil.getSc
 import constant.Constants._
 
 /**
@@ -27,6 +27,8 @@ object SparkPartitioner {
     })
 
     rstRDD.partitionBy(new MyPartitioner(8)).saveAsTextFile(outParPath)
+
+    sc.stop()
 
   }
 
