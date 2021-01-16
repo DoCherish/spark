@@ -1,4 +1,4 @@
-package sparkstreaming01
+package sparkstreaming
 
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.SparkConf

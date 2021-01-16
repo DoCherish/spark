@@ -1,4 +1,4 @@
-package sparkstreaming01
+package sparkstreaming
 
 import java.sql.DriverManager
 

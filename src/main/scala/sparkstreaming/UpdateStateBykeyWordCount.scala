@@ -1,4 +1,4 @@
-package sparkstreaming01
+package sparkstreaming
 
 import jdk.nashorn.internal.runtime.options.LoggingOption.LoggerInfo
 import org.apache.log4j.{Level, Logger}
