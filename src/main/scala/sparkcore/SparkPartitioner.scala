@@ -2,7 +2,7 @@ package sparkcore
 
 import org.apache.spark.{Partitioner, SparkContext}
 import org.apache.spark.rdd.RDD
-import utils.SparkContextUtil.getSc
+import utils.SparkContextUtil.getScLocal
 import constant.Constants._
 
 /**
@@ -15,7 +15,7 @@ object SparkPartitioner {
 
   def main(args: Array[String]): Unit = {
 
-    val sc: SparkContext = getSc("SparkBroadCast", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("SparkBroadCast", "local[2]", "WARN")
     val dataRDD: RDD[String] = sc.textFile(webDataPath, 4)
     val rstRDD: RDD[(String, String)] = dataRDD.map(data => {
       val strings: Array[String] = data.split("@zolen@")

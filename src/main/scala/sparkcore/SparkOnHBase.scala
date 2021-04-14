@@ -2,7 +2,7 @@ package sparkcore
 
 import org.apache.hadoop.conf.Configuration
 import utils.HbaseUtil.createHbaseConf
-import utils.SparkContextUtil.getSc
+import utils.SparkContextUtil.getScLocal
 import constant.Constants._
 import org.apache.hadoop.hbase.TableName
 import org.apache.hadoop.hbase.client.{Result, Scan}
@@ -18,7 +18,7 @@ import org.apache.spark.rdd.RDD
  */
 object SparkOnHBase {
   def main(args: Array[String]): Unit = {
-    val sc: SparkContext = getSc("SparkOnHBase", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("SparkOnHBase", "local[2]", "WARN")
 
     val conf: Configuration = createHbaseConf()
     conf.set(TableInputFormat.INPUT_TABLE, sparkHbase)

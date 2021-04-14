@@ -9,7 +9,7 @@ import org.apache.spark.streaming.dstream.ReceiverInputDStream
  */
 object StreamingContextUtil {
 
-  def createSocketSatream(ssc: StreamingContext): ReceiverInputDStream[String] = {
+  def createSocketStream(ssc: StreamingContext): ReceiverInputDStream[String] = {
     ssc.socketTextStream("node01", 9999)
   }
 

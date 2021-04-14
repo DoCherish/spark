@@ -1,7 +1,7 @@
 package sparkcore
 
 import org.apache.spark.SparkContext
-import utils.SparkContextUtil.getSc
+import utils.SparkContextUtil.getScLocal
 import utils.HbaseUtil._
 import constant.Constants._
 import org.apache.hadoop.conf.Configuration
@@ -18,7 +18,7 @@ import org.apache.spark.rdd.RDD
 object SparkWithHbase {
 
   def main(args: Array[String]): Unit = {
-    val sc: SparkContext = getSc("SparkBroadCast", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("SparkBroadCast", "local[2]", "WARN")
 
     val conf: Configuration = createHbaseConf()
 

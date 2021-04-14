@@ -2,7 +2,7 @@ package sparkcore
 
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
-import utils.SparkContextUtil.getSc
+import utils.SparkContextUtil.getScLocal
 
 /**
  * @Author Do
@@ -12,7 +12,7 @@ import utils.SparkContextUtil.getSc
 object VisitTopN {
 
   def main(args: Array[String]): Unit = {
-    val sc: SparkContext = getSc("VisitTopN", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("VisitTopN", "local[2]", "WARN")
 
     val dataRDD: RDD[String] = sc.textFile("src/main/resources/sparkcore/access.log")
 

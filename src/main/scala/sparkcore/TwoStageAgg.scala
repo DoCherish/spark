@@ -24,7 +24,7 @@ import utils.SparkContextUtil._
 object TwoStageAgg {
   def main(args: Array[String]): Unit = {
 
-    val sc: SparkContext = getSc("TwoStageAgg", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("TwoStageAgg", "local[2]", "WARN")
 
     val array = Array("love", "love", "love", "love", "love", "love", "love", "you", "i")
 

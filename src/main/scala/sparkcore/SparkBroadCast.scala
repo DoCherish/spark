@@ -3,7 +3,7 @@ package sparkcore
 import org.apache.spark.SparkContext
 import org.apache.spark.broadcast.Broadcast
 import org.apache.spark.rdd.RDD
-import utils.SparkContextUtil.getSc
+import utils.SparkContextUtil.getScLocal
 import constant.Constants._
 
 /**
@@ -13,7 +13,7 @@ import constant.Constants._
 object SparkBroadCast {
   def main(args: Array[String]): Unit = {
 
-    val sc: SparkContext = getSc("SparkBroadCast", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("SparkBroadCast", "local[2]", "WARN")
 
     val productRDD: RDD[String] = sc.textFile(pdtsPath)
     val mapProduct: collection.Map[String, String] = productRDD.map((x => (x.split(",")(0), x))).collectAsMap()

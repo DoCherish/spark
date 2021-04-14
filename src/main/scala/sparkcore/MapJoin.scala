@@ -3,7 +3,7 @@ package sparkcore
 import org.apache.spark.SparkContext
 import org.apache.spark.broadcast.Broadcast
 import org.apache.spark.rdd.RDD
-import utils.SparkContextUtil.getSc
+import utils.SparkContextUtil.getScLocal
 
 /**
  * @Author Do
@@ -28,7 +28,7 @@ import utils.SparkContextUtil.getSc
 object MapJoin {
   def main(args: Array[String]): Unit = {
 
-    val sc: SparkContext = getSc("TwoStageAgg", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("TwoStageAgg", "local[2]", "WARN")
 
     val lista: Array[(String, String)] = Array(
       // pid,amount

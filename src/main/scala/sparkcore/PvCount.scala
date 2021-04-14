@@ -12,7 +12,7 @@ import utils.SparkContextUtil._
 object PvCount {
 
   def main(args: Array[String]): Unit = {
-    val sc: SparkContext = getSc("Pv", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("Pv", "local[2]", "WARN")
 
     val dataRDD: RDD[String] = sc.textFile("src/main/resources/sparkcore/access.log")
     val pv: Long = dataRDD.count()

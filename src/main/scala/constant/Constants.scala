@@ -29,7 +29,20 @@ object Constants {
   lazy val zkPort: String = config.getString("hbase.zookeeper.property.clientPort")
 
   lazy val sparkHbase: String = "spark_hbase"
-  
+
+  lazy val BOOTSTRAP_SERVERS: String = "node01:9092,node02:9092,node03:9092"
+
+  lazy val id: String = "id"
+
+  lazy val enterprise_id: String = "enterprise_id"
+  lazy val train_id: String = "train_id"
+  lazy val user_id: String = "user_id"
+  lazy val test_submit_times: String = "test_submit_times"
+  lazy val test_score_set: String = "test_score_set"
+  lazy val total_points: String = "total_points"
+  lazy val stat_date: String = "stat_date"
+
+
 
 
 

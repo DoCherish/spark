@@ -4,7 +4,7 @@ import org.apache.spark
 import org.apache.spark.SparkContext
 import org.apache.spark.sql.{DataFrame, Row, SparkSession}
 import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
-import utils.SparkContextUtil.getSc
+import utils.SparkContextUtil.getScLocal
 
 /**
  * @Author Do
@@ -12,7 +12,7 @@ import utils.SparkContextUtil.getSc
  */
 object createEmtyDF {
   def main(args: Array[String]): Unit = {
-    val sc: SparkContext = getSc("TwoStageAgg", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("TwoStageAgg", "local[2]", "WARN")
 
     val spark: SparkSession = SparkSession.builder().appName("test").getOrCreate()
 

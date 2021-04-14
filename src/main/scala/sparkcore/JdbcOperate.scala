@@ -4,7 +4,7 @@ import java.sql.{Connection, DriverManager, PreparedStatement, ResultSet}
 
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.{JdbcRDD, RDD}
-import utils.SparkContextUtil.getSc
+import utils.SparkContextUtil.getScLocal
 import constant.Constants._
 import org.apache.commons.lang3.StringUtils
 
@@ -20,7 +20,7 @@ object JdbcOperate {
 
   def main(args: Array[String]): Unit = {
 
-    val sc: SparkContext = getSc("JdbcOperate", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("JdbcOperate", "local[2]", "WARN")
 
     val getConn: () => Connection = () => DriverManager.getConnection(mysqlUrl, mysqlUser, mysqlPsw)
 

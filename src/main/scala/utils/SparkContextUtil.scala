@@ -8,10 +8,10 @@ import org.apache.spark.{SparkConf, SparkContext}
  */
 object SparkContextUtil {
 
-  def getSc(appName: String, master: String, logLevel: String): SparkContext = {
-    val sparkConf: SparkConf = new SparkConf().setAppName(appName).setMaster(master)
+  def getScLocal(appName: String): SparkContext = {
+    val sparkConf: SparkConf = new SparkConf().setAppName(appName).setMaster("local[2]")
     val sc = new SparkContext(sparkConf)
-    sc.setLogLevel(logLevel)
+    sc.setLogLevel("WARN")
 
     sc
   }
