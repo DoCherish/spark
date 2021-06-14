@@ -12,7 +12,7 @@ import utils.SparkContextUtil.getScLocal
  */
 object createEmtyDF {
   def main(args: Array[String]): Unit = {
-    val sc: SparkContext = getScLocal("TwoStageAgg", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("TwoStageAgg")
 
     val spark: SparkSession = SparkSession.builder().appName("test").getOrCreate()
 

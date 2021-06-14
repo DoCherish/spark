@@ -18,7 +18,7 @@ import org.apache.spark.rdd.RDD
  */
 object SparkOnHBase {
   def main(args: Array[String]): Unit = {
-    val sc: SparkContext = getScLocal("SparkOnHBase", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("SparkOnHBase")
 
     val conf: Configuration = createHbaseConf()
     conf.set(TableInputFormat.INPUT_TABLE, sparkHbase)

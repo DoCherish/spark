@@ -28,7 +28,7 @@ import utils.SparkContextUtil.getScLocal
 object MapJoin {
   def main(args: Array[String]): Unit = {
 
-    val sc: SparkContext = getScLocal("TwoStageAgg", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("TwoStageAgg")
 
     val lista: Array[(String, String)] = Array(
       // pid,amount

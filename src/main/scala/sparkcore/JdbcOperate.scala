@@ -20,7 +20,7 @@ object JdbcOperate {
 
   def main(args: Array[String]): Unit = {
 
-    val sc: SparkContext = getScLocal("JdbcOperate", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("JdbcOperate")
 
     val getConn: () => Connection = () => DriverManager.getConnection(mysqlUrl, mysqlUser, mysqlPsw)
 

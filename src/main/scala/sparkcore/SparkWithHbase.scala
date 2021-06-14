@@ -18,7 +18,7 @@ import org.apache.spark.rdd.RDD
 object SparkWithHbase {
 
   def main(args: Array[String]): Unit = {
-    val sc: SparkContext = getScLocal("SparkBroadCast", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("SparkBroadCast")
 
     val conf: Configuration = createHbaseConf()
 

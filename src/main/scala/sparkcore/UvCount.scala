@@ -13,7 +13,7 @@ object UvCount {
 
   def main(args: Array[String]): Unit = {
 
-    val sc: SparkContext = getScLocal("Uv", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("Uv")
 
     val dataRDD: RDD[String] = sc.textFile("src/main/resources/sparkcore/access.log")
     val urls: RDD[String] = dataRDD.map(_.split(" ")(0))

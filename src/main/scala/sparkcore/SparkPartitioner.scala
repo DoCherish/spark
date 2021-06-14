@@ -15,7 +15,7 @@ object SparkPartitioner {
 
   def main(args: Array[String]): Unit = {
 
-    val sc: SparkContext = getScLocal("SparkBroadCast", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("SparkBroadCast")
     val dataRDD: RDD[String] = sc.textFile(webDataPath, 4)
     val rstRDD: RDD[(String, String)] = dataRDD.map(data => {
       val strings: Array[String] = data.split("@zolen@")

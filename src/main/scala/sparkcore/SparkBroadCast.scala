@@ -13,7 +13,7 @@ import constant.Constants._
 object SparkBroadCast {
   def main(args: Array[String]): Unit = {
 
-    val sc: SparkContext = getScLocal("SparkBroadCast", "local[2]", "WARN")
+    val sc: SparkContext = getScLocal("SparkBroadCast")
 
     val productRDD: RDD[String] = sc.textFile(pdtsPath)
     val mapProduct: collection.Map[String, String] = productRDD.map((x => (x.split(",")(0), x))).collectAsMap()
