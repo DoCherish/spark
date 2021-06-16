@@ -26,7 +26,7 @@ object TopnTeacher {
       ((subject, teacher), 1)
     })
 
-    val rst: RDD[((String, String), Int)] = method5(subjectTeacherAddOne)
+    val rst: RDD[((String, String, Int), Null)] = method6(subjectTeacherAddOne)
 
     println(rst.collect().toBuffer)
 
@@ -131,8 +131,37 @@ object TopnTeacher {
       sorter.iterator
 
     })
+  }
 
+  // 调用算子：repartitionAndSortWithinPartitions
+  def method6(subjectTeacherAddOne: RDD[((String, String), Int)]) = {
+    val subjects: Array[String] = subjectTeacherAddOne.map(_._1._1).distinct().collect()
+    val reduced: RDD[((String, String), Int)] = subjectTeacherAddOne.reduceByKey(_ + _)
+    val partitioner: SubjectPartitionerV2 = new SubjectPartitionerV2(subjects)
+    // 在原数据上构建新的key
+    val newRDD: RDD[((String, String, Int), Null)] = reduced.map(t => ((t._1._1, t._1._2, t._2), null))
+    // 隐式转换：新的排序规则
+    implicit val sortRules = Ordering[Int].on[(String, String, Int)](-_._3)
 
+    val rst: RDD[((String, String, Int), Null)] = newRDD.repartitionAndSortWithinPartitions(partitioner)
+    rst
+  }
+
+  class SubjectPartitionerV2(subjects: Array[String]) extends Partitioner {
+    private val sorter = new mutable.HashMap[String, Int]()
+    var index: Int = 0
+    for (i <- subjects) {
+      sorter(i) = index
+      index += 1
+    }
+
+    override def numPartitions: Int = subjects.length
+
+    override def getPartition(key: Any): Int = {
+      val tuple: (String, String, Int) = key.asInstanceOf[(String, String, Int)]
+      val subject: String = tuple._1
+      sorter(subject)
+    }
   }
 
 
